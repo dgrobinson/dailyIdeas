@@ -69,7 +69,7 @@ h1, h2{
     background-color:#fff;
     color:#000;
 }
-input#new_post_title, textarea#new_post_body{
+input#new_post_title, input#new_post_url, textarea#new_post_body{
     display:block;
     width:400px;
     border:1px solid #aaa;
