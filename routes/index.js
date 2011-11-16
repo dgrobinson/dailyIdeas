@@ -3,5 +3,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'dgrFlow' })
+  res.render('index', { title: 'Daily Ideas' })
 };
