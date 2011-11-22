@@ -35,7 +35,9 @@ function submitPost(){
    //clone an existing post, and set values of the new post
    $new_post = $('.postbox').first().clone();
    $new_post.find(".post_title").text( $("#new_post_title").val() );
-   $new_post.find(".post_url").text( $("#new_post_url").val() );
+   var $urlclass = $new_post.find(".post_url");
+   $urlclass.find("[href]:first").attr("href", $("new_post_url").val() );
+   // $new_post.find(".post_url").attr("href")( "test" );
    $new_post.find(".post_body").text( $("#new_post_body").val() );
    $new_post.find(".post_time").text( "just now.");
    
