@@ -9,7 +9,7 @@ module.exports.index = module.exports.list_posts = function( req, res ) {
   
     Post.find( function ( err, posts ) {
 
-            res.render( 'index.ejs', { title: 'CrushFlow', posts: posts.reverse() } );
+            res.render( 'index.ejs', { title: 'DailyIdeas', posts: posts.reverse() } );
 
                 } );
 
@@ -21,7 +21,7 @@ module.exports.index = module.exports.list_posts = function( req, res ) {
                  *   */ 
 
                 module.exports.create_post = function( req, res ) {
-                    new Post( { title: req.body.post.title, content: req.body.post.content } ).save( function (err) {
+                    new Post( { title: req.body.post.title, content: req.body.post.content, url: req.body.post.url } ).save( function (err) {
 
                             if ( !err ) {
                                         console.log( 'Success!' );

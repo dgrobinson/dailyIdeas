@@ -5,6 +5,7 @@ var mongoose = require( 'mongoose' )
             title       : String
                 ,   content : String
                     ,   date    : { type: Date, default: Date.now }
+                    ,   url     : String
                     } );
 
                     postSchema.methods.date_display = function () {

@@ -17,7 +17,7 @@
   <div id="new_item_box" style="display:none">
   <form method="post" action="/">
     <input id="new_post_title" class="defaultText" value="Title" alt="Title" name="post[title]"/>
-    <input id="new_post_url" class="defaultText" value="URL (optional)" alt="URL" />
+    <input id="new_post_url" class="defaultText" value="URL (optional)" alt="URL" name="post[url]"/>
     <textarea id="new_post_body" class="defaultText" alt="omg on cross campus" name="post[content]">say something</textarea>
     <button id="submit_post">Submit!</button>
     </form>
@@ -29,6 +29,7 @@
     <div class="postbox">
       <h2 class="post_title"><%= posts[ i ].title %></h2>
       <p class="post_body"><%= posts[ i ].content %></p>
+      <p><a href="<%= posts[ i ].url %>">>></a></p>
       <div class="post_time"><%= posts[ i ].date_display() %></div>
     </div>
   
